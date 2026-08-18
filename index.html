@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurum Atelier Registry - private collection catalogue for art curation and valuation tracking.">
+  <title>Aurum Atelier Registry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="eyebrow">PRIVATE COLLECTION SYSTEM</p>
+    <h1>Aurum Atelier Registry</h1>
+    <p class="tagline">An articulate catalogue for collectors tracking holdings, display status, and portfolio value.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-form">
+      <h2>Register New Piece</h2>
+      <form id="artwork-form" novalidate>
+        <label>
+          Artwork Title
+          <input type="text" id="artwork-title" placeholder="Nocturne in Gold" required maxlength="60">
+        </label>
+
+        <label>
+          Artist
+          <input type="text" id="artwork-artist" placeholder="Amina Kariuki" required maxlength="60">
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Medium
+            <select id="artwork-medium" required>
+              <option value="">Select</option>
+              <option value="Painting">Painting</option>
+              <option value="Sculpture">Sculpture</option>
+              <option value="Photography">Photography</option>
+              <option value="Textile">Textile</option>
+            </select>
+          </label>
+
+          <label>
+            Curation Status
+            <select id="artwork-status" required>
+              <option value="">Select</option>
+              <option value="On Display">On Display</option>
+              <option value="In Storage">In Storage</option>
+              <option value="On Loan">On Loan</option>
+              <option value="Under Restoration">Under Restoration</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>
+            Estimated Value (USD)
+            <input type="number" id="artwork-value" min="500" max="100000000" step="100" required>
+          </label>
+
+          <label>
+            Acquired On
+            <input type="date" id="artwork-date" required>
+          </label>
+        </div>
+
+        <button type="submit">Add Piece</button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel panel-stats">
+      <h2>Collection Intelligence</h2>
+      <div class="stat-grid">
+        <article class="stat-card">
+          <p>Total Pieces</p>
+          <strong id="total-pieces">0</strong>
+        </article>
+        <article class="stat-card">
+          <p>Portfolio Value</p>
+          <strong id="portfolio-value">$0</strong>
+        </article>
+        <article class="stat-card">
+          <p>On Display</p>
+          <strong id="on-display-count">0</strong>
+        </article>
+        <article class="stat-card">
+          <p>Acquisition Target</p>
+          <strong id="target-status">0 / 12</strong>
+        </article>
+      </div>
+
+      <div class="goal-box">
+        <label for="annual-target">Set Annual Acquisition Target</label>
+        <div class="goal-row">
+          <input type="number" id="annual-target" min="1" max="100" value="12">
+          <button id="save-target" type="button">Save Target</button>
+        </div>
+        <div class="progress-wrap">
+          <div id="target-progress" class="progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel-list">
+      <div class="list-header">
+        <h2>Collection Register</h2>
+        <select id="filter-medium" aria-label="Filter by medium">
+          <option value="All">All Media</option>
+          <option value="Painting">Painting</option>
+          <option value="Sculpture">Sculpture</option>
+          <option value="Photography">Photography</option>
+          <option value="Textile">Textile</option>
+        </select>
+      </div>
+
+      <ul id="artwork-list" class="collection-list"></ul>
+      <p id="empty-state" class="empty-state">No artworks registered yet. Add your first piece.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Curated by Wachira Njoroge | Static Web Project</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
