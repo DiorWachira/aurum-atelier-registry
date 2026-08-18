@@ -42,27 +42,27 @@
 
 ### A. Milestones and Issues
 
-[PASTE YOUR MILESTONE SCREENSHOT DIRECTLY HERE]
+![Milestones and issues](evidence/screenshots/milestones-issues.png)
 
-- Caption: [Write a brief sentence describing your milestones here]
+- Caption: Repository milestones are configured (M1, M2, M3) and issue tracking has started with issue-to-milestone linkage.
 
 ### B. Project Board
 
-[PASTE YOUR PROJECT BOARD SCREENSHOT DIRECTLY HERE]
+![Project board](evidence/screenshots/project-board.png)
 
-- Caption: [Write a brief sentence describing your board state here]
+- Caption: Project board section captured before board creation; next step is creating a Kanban board with To Do, In Progress, and Done columns.
 
 ### C. Branching Architecture
 
-[PASTE YOUR BRANCHING SCREENSHOT DIRECTLY HERE]
+![Branching architecture](evidence/screenshots/branching-architecture.png)
 
-- Caption: [Write a brief sentence describing your branch list here]
+- Caption: Branch inventory shows `main` and issue-linked feature branch naming with `feat/` convention.
 
 ### D. Pull Requests & Traceability
 
-[PASTE YOUR PULL REQUEST SCREENSHOT DIRECTLY HERE]
+![Pull requests and traceability](evidence/screenshots/pull-requests-traceability.png)
 
-- Caption: [Write a brief sentence describing your PR and what issue it closes]
+- Caption: Pull request view captured before PR creation; upcoming PRs will reference linked issues using `Closes #issue-number`.
 
 ---
 
