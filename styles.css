@@ -3,7 +3,7 @@
   --panel: #fffaf2;
   --text: #2a2117;
   --muted: #6c6052;
-  --brand: #8f6a2f;
+  --accent: #8f6a2f;
   --brand-2: #134b43;
   --danger: #b63d2b;
   --border: #ddcfbb;
@@ -59,7 +59,7 @@ body {
 
 .eyebrow {
   letter-spacing: 0.15em;
-  color: var(--brand);
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -139,7 +139,7 @@ button {
 input:focus,
 select:focus {
   outline: 2px solid rgba(143, 106, 47, 0.25);
-  border-color: var(--brand);
+  border-color: var(--accent);
 }
 
 .grid-2 {
@@ -149,7 +149,7 @@ select:focus {
 }
 
 button {
-  background: linear-gradient(120deg, var(--brand), #ad833f);
+  background: linear-gradient(120deg, var(--accent), #ad833f);
   border: none;
   color: white;
   cursor: pointer;
