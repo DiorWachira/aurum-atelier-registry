@@ -1,64 +1,128 @@
-# Aurum Atelier Registry - Private Art Collection System
+# Project Submission Report
 
-Aurum Atelier Registry is a static web project that helps collectors list artworks, track where they are, and see the total value of their collection.
+## 1. Student Details
 
-## Live Deployment
+- Full Name: Wachira Njoroge
+- GitHub Username: DiorWachira
+- Email: njoroge.wachira@strathmore.edu
 
-- GitHub Pages URL: https://diorwachira.github.io/aurum-atelier-registry/
+---
 
-## Repository Links
+## 2. Deployed Project Link
 
-- Repository: https://github.com/DiorWachira/aurum-atelier-registry
-- Milestones: https://github.com/DiorWachira/aurum-atelier-registry/milestones
-- Issues: https://github.com/DiorWachira/aurum-atelier-registry/issues
-- Pull Requests: https://github.com/DiorWachira/aurum-atelier-registry/pulls
-- Project Board (Kanban): https://github.com/users/DiorWachira/projects/1/views/2
-- Written Submission: ./submission.md
+- Live GitHub Pages URL: https://diorwachira.github.io/aurum-atelier-registry/
 
-## Features
+---
 
-- Register artworks with title, artist, medium, curation status, value, and acquisition date
-- Filter the collection list by medium (Painting, Sculpture, Photography, Textile)
-- Remove entries from the list when needed
-- Dashboard updates automatically to show:
-  - Total number of pieces
-  - Total collection value (USD)
-  - Number of pieces on display
-  - Progress toward annual target
-- Save annual target in browser storage
-- Responsive layout for both desktop and mobile
+## 3. Reflection - Grounded in Your Git History
 
-## Technology Stack
+### A. Your Best Commit
 
-- HTML5
-- CSS3 (variables, responsive grid, animations)
-- Vanilla JavaScript (ES2020+)
-- Local Storage for persistence
-- GitHub Pages for hosting
+- Commit URL: https://github.com/DiorWachira/aurum-atelier-registry/commit/3917382b30a8c890e2beee86ec88ea7b8dbb5b71
+- Why this one? This commit uses a clear conventional format (fix), a short action-based title, and a focused message that explains the exact bug it solves. It also links back to issue work through footer references.
 
-## Run Locally
+### B. A Mistake or Struggle
 
-1. Clone the repository.
-2. Open the project folder.
-3. Open `index.html` directly in your browser.
+- Link to the evidence: https://github.com/DiorWachira/aurum-atelier-registry/pull/14
+- What happened and how did you recover? I created a delete-versus-modify conflict that was hard to finish in the GitHub web editor, so the merge took longer than planned. I fixed it by resolving the conflict locally, committing the result, pushing the branch, and then finishing the merge through the PR.
 
-## Project Structure
+### C. A Pull Request You're Proud Of
 
-- `index.html` - page structure
-- `styles.css` - styling and responsive layout
-- `app.js` - app logic, calculations, and rendering
-- `submission.md` - written report for the assignment
-- `evidence/` - screenshots for merge conflict proof
+- PR URL: https://github.com/DiorWachira/aurum-atelier-registry/pull/10
+- What did you check before merging? I checked that each commit was small and clean, reviewed the changed files for clarity, and confirmed issue links in the PR description (Closes #2, Refs #4, Refs #6) before merging.
 
-## Assessment Evidence
+### D. One Thing You Would Do Differently
 
-- Submission report: ./submission.md
-- Conflict evidence 1: ./evidence/conflict_evidence_1.png
-- Conflict evidence 2: ./evidence/conflict_evidence_2.png
-- Conflict evidence 3: ./evidence/conflict_evidence_3.png
+- What would you change? I would create separate sandbox files for conflict demos from the beginning instead of editing active docs, so I can avoid extra rework and keep final docs cleaner.
+- Link to the evidence of the original decision: https://github.com/DiorWachira/aurum-atelier-registry/pull/12
 
-## Notes for Assessment
+---
 
-- Commit directly to `main` is not used.
-- Use issue-linked branches and pull requests for each task.
-- Use Conventional Commits across the full history.
+## 4. Screenshots of Key GitHub Features
+
+### A. Milestones and Issues
+
+![Milestones and issues](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/milestones-issues.png)
+
+- Caption: Repository milestones are configured (M1, M2, M3) and issue tracking has started with issue-to-milestone linkage.
+- Caption: Milestones were set up (M1, M2, M3), and issues were linked to the right milestone before work moved forward.
+
+### B. Project Board
+
+![Project board](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/project-board-done.png)
+
+- Caption: Kanban board with To Do, In Progress, and Done was created and actively used by moving issues across columns.
+- Caption: A Kanban board with To Do, In Progress, and Done was created, and issues were moved across columns during the project.
+
+### C. Branching Architecture
+
+![Branching architecture](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/branching-architecture.png)
+
+- Caption: The branch list shows main and issue-linked feature branches using the feat naming pattern.
+
+### D. Pull Requests & Traceability
+
+![Pull requests and traceability](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/pull-requests-traceability.png)
+
+- Caption: Pull request #10 is merged and includes issue-linked traceability in the description.
+- Caption: Pull request #10 was merged and includes clear issue traceability in the description.
+
+---
+
+## 5. Merge Conflict Evidence
+
+### Conflict 1 - Full Chronology
+
+What cause did you use? Same-line edit conflict.
+
+#### Step 1: Generating the Clash
+
+![Conflict 1 step 1](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/conflict1-step1-merge-warning.png)
+
+- Caption: Branches feat/7-conflict-same-line-alpha and feat/7-conflict-same-line-beta changed the same README line in different ways, so GitHub could not merge automatically.
+
+#### Step 2: Inside the Code Editor (Conflict Markers)
+
+![Conflict 1 markers](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/conflict_evidence_1.png)
+
+- Caption: The conflict markers show two edits on the same line. I resolved it by keeping both deployment notes to keep release planning and CI notes together.
+
+#### Step 3: Resolution & Clean Merge
+
+![Conflict 1 merged](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/screenshots/conflict1-step3-merged.png)
+
+- Caption: PR #12 was resolved and merged successfully after the conflict was fixed.
+
+### Conflict 2 - Different Cause
+
+What cause did you use? Overlapping block edits during parallel refactoring.
+
+Why does this cause trigger a conflict? Two branches changed the same block in app.js with different fallback values, so Git could not choose one final result automatically.
+
+![Conflict 2 markers](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/conflict_evidence_2.png)
+
+- Caption: Branches fix/8-overlap-block-a and fix/8-overlap-block-b conflicted in app.js around normalizePiece fallback values.
+
+### Conflict 3 - Different Cause
+
+What cause did you use? Refactor-versus-edit conflict in shared configuration lines.
+
+Why does this cause trigger a conflict? One branch renamed a design token (brand to accent) while another branch edited the old brand token value on the same lines, which created conflicting edits.
+
+![Conflict 3 markers](https://raw.githubusercontent.com/DiorWachira/aurum-atelier-registry/main/evidence/conflict_evidence_3.png)
+
+- Caption: Branches feat/9-theme-refactor-a and feat/9-theme-tune-b collided in styles.css at the root token section.
+
+---
+
+## 6. Feedback & Evaluation
+
+- [ ] Anonymous Evaluation Form: [Course & Instructor Evaluation](https://forms.gle/YLybnsyXXErKEg3s9)
+
+---
+
+## Final Submission
+
+Submit through: https://forms.gle/KrT4VxtFtkU3wtYu8
+
+Deadline reminder: no late submissions are accepted.
