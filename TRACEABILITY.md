@@ -15,3 +15,6 @@ This file maps tasks to branches and pull requests for grading visibility.
 | #9 | Conflict scenario 3 evidence | feat/9-conflict-rename-edit | #9 (planned) | Planned |
 
 Update PR numbers once each pull request is created.
+
+## Scenario 2 Note
+This line is added on the modify branch for conflict demonstration.
