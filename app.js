@@ -168,7 +168,13 @@ function loadPieces() {
     }
 
     const data = JSON.parse(raw);
-    return Array.isArray(data) ? data : [];
+    if (!Array.isArray(data)) {
+      return [];
+    }
+
+    return data
+      .map((item) => normalizePiece(item))
+      .filter((item) => item !== null);
   } catch {
     return [];
   }
@@ -188,6 +194,27 @@ function formatCurrency(value) {
   return new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0
   }).format(value);
+}
+
+function normalizePiece(item) {
+  if (!item || typeof item !== "object") {
+    return null;
+  }
+
+  const value = Number(item.value);
+  if (!Number.isFinite(value) || value <= 0) {
+    return null;
+  }
+
+  return {
+    id: typeof item.id === "string" && item.id ? item.id : crypto.randomUUID(),
+    title: String(item.title || "Untitled"),
+    artist: String(item.artist || "Unknown"),
+    medium: String(item.medium || "Painting"),
+    status: String(item.status || "In Storage"),
+    value,
+    date: String(item.date || new Date().toISOString().split("T")[0])
+  };
 }
 
 function escapeHtml(value) {
