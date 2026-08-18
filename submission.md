@@ -48,9 +48,9 @@
 
 ### B. Project Board
 
-![Project board](evidence/screenshots/project-board.png)
+![Project board](evidence/screenshots/project-board-done.png)
 
-- Caption: Project board section captured before board creation; next step is creating a Kanban board with To Do, In Progress, and Done columns.
+- Caption: Kanban board with To Do, In Progress, and Done was created and actively used by moving issues across columns.
 
 ### C. Branching Architecture
 
@@ -62,7 +62,7 @@
 
 ![Pull requests and traceability](evidence/screenshots/pull-requests-traceability.png)
 
-- Caption: Pull request view captured before PR creation; upcoming PRs will reference linked issues using `Closes #issue-number`.
+- Caption: Pull request #10 is merged and includes issue-linked traceability in the description.
 
 ---
 
@@ -70,45 +70,45 @@
 
 ### Conflict 1 - Full Chronology
 
-What cause did you use? [Example: same-line edit conflict]
+What cause did you use? Same-line edit conflict.
 
 #### Step 1: Generating the Clash
 
-[PASTE SCREENSHOT OF ATTEMPTED MERGE / TERMINAL WARNING HERE]
+![Conflict 1 step 1](evidence/screenshots/conflict1-step1-merge-warning.png)
 
-- Caption: [Describe which two branches collided and the warning received]
+- Caption: Branches feat/7-conflict-same-line-alpha and feat/7-conflict-same-line-beta changed the same README deployment line differently, and GitHub reported that it could not automatically merge.
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
 
-[PASTE SCREENSHOT OF RAW CONFLICT MARKERS HERE]
+![Conflict 1 markers](evidence/conflict_evidence_1.png)
 
-- Caption: [Explain what caused the dispute and your reasoning for the final version]
+- Caption: The conflict markers show competing edits to the same line; I resolved by keeping both deployment notes so release planning and CI readiness are both captured.
 
 #### Step 3: Resolution & Clean Merge
 
-[PASTE SCREENSHOT OF CLEAN RESOLUTION HERE]
+![Conflict 1 merged](evidence/screenshots/conflict1-step3-merged.png)
 
-- Caption: [Describe the final state after resolution]
+- Caption: PR #12 was resolved and merged cleanly after conflict resolution, confirming the branch integration completed successfully.
 
 ### Conflict 2 - Different Cause
 
-What cause did you use? [Example: file deletion vs modification]
+What cause did you use? Overlapping block edits during parallel refactoring.
 
-Why does this cause trigger a conflict? [1-2 sentences]
+Why does this cause trigger a conflict? Two branches changed the same normalization block in app.js with different fallback values, so Git could not determine a single safe output for that hunk.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 2 HERE]
+![Conflict 2 markers](evidence/conflict_evidence_2.png)
 
-- Caption: [Brief description of the conflicting branches and file]
+- Caption: Branches fix/8-overlap-block-a and fix/8-overlap-block-b conflict in app.js around normalizePiece fallback values.
 
 ### Conflict 3 - Different Cause
 
-What cause did you use? [Example: file rename/move vs edit]
+What cause did you use? Refactor-versus-edit conflict in shared configuration lines.
 
-Why does this cause trigger a conflict? [1-2 sentences]
+Why does this cause trigger a conflict? One branch renamed a design token (brand to accent) while another branch edited the original brand token value on the same lines, creating incompatible edits in the same section.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 3 HERE]
+![Conflict 3 markers](evidence/conflict_evidence_3.png)
 
-- Caption: [Brief description of the conflicting branches and file]
+- Caption: Branches feat/9-theme-refactor-a and feat/9-theme-tune-b collide in styles.css at the root token definitions.
 
 ---
 
