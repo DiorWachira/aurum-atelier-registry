@@ -3,7 +3,11 @@
   --panel: #fffaf2;
   --text: #2a2117;
   --muted: #6c6052;
+<<<<<<< HEAD
   --accent: #8f6a2f;
+=======
+  --brand: #7a5a28;
+>>>>>>> origin/main
   --brand-2: #134b43;
   --danger: #b63d2b;
   --border: #ddcfbb;
@@ -324,3 +328,4 @@ button:hover {
     max-width: none;
   }
 }
+
