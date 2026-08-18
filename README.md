@@ -4,7 +4,7 @@ Aurum Atelier Registry is a static web micro-system for collectors and curators 
 
 ## Live Deployment
 
-- GitHub Pages URL: [Add your live link after deployment]
+- GitHub Pages URL: [Production URL reserved for M3 release]
 
 ## Features
 
